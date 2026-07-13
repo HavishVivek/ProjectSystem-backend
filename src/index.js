@@ -24,7 +24,8 @@ const app = express()
 // Only allow your own frontend origins. This is your responsibility now that
 // you're not on Firebase Callable Functions (which handled CORS automatically).
 const allowedOrigins = [
-  'http://localhost:5173',                  // Vite dev server
+  'http://localhost:5173', 
+  'http://localhost:5174',                 // Vite dev server
   'https://video-helper-xi.vercel.app'
   // 'https://your-production-domain.com',  // add when you deploy the frontend
 ]
