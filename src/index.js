@@ -13,6 +13,7 @@ import { requireAuth } from './middleware/auth.js'
 import aiSearchRouter from './routes/aiSearch.js'
 import driveRouter from './routes/drive.js'
 import scriptsRouter from './routes/scripts.js'
+import embedRouter from './routes/embed.js'
 // Not built yet — uncomment as you add them:
 // import calendarRouter from './routes/calendar.js'
 // import notionRouter from './routes/notion.js'
@@ -49,6 +50,7 @@ app.get('/health', (req, res) => res.json({ ok: true }))
 app.use('/api/ai-search', requireAuth, aiSearchRouter)
 app.use('/api/drive', requireAuth, driveRouter)
 app.use('/api/scripts', requireAuth, scriptsRouter)
+app.use('/api/embed', embedRouter)
 // app.use('/api/calendar', requireAuth, calendarRouter)
 // app.use('/api/notion', requireAuth, notionRouter)
 
